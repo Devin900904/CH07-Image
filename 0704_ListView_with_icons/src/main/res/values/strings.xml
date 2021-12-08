@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">7.4 畫廊</string>
+    <string name="action_settings">結束</string>
+
+    <string name="myname">14林建誠</string>
+    <string name="textview">TextView</string>
+    <string name="m704_t001">顯示圖片</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="weekday">
+       <item>sunday</item>
+       <item>Monday</item>
+       <item>Thuseday</item>
+       <item>thirtday</item>
+       <item>thursday</item>
+       <item>friday</item>
+       <item>saturday</item>
+       <item>seven</item>
+       <item>eight</item>
+       <item>night</item>
+
+   </string-array>
+    <string-array name="weekday02">
+        <item>星期日猴子穿新衣</item>
+        <item>星期一猴子穿新衣</item>
+        <item>星期二猴子穿新衣</item>
+        <item>星期三猴子穿新衣</item>
+        <item>星期四猴子穿新衣</item>
+        <item>星期五猴子穿新衣</item>
+        <item>星期六猴子穿新衣</item>
+        <item>星期七猴子穿新衣</item>
+        <item>星期八猴子穿新衣</item>
+        <item>星期九猴子穿新衣</item>
+    </string-array>
+
+
+
+
+    <string name="m0704_t003">星期日</string>
+    <string name="m0704_t002">選擇</string>
+</resources>

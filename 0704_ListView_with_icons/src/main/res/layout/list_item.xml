@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+
+    <ImageView
+        android:id="@+id/m0704_im01"
+        android:layout_width="@dimen/p100"
+        android:layout_height="@dimen/p100"
+        android:background="@color/Teal"
+        android:contentDescription="@string/m704_t001"
+        android:scaleType="matrix"
+        tools:srcCompat="@drawable/img01th">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/Teal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/m0704_t002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/m0704_t002"
+            android:textColor="@color/Aqua"
+            android:textSize="@dimen/fontsize" />
+
+        <TextView
+            android:id="@+id/m0704_t003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/m0704_t003"
+            android:textColor="@color/Yellow"
+            android:textSize="@dimen/fontsize" />
+    </LinearLayout>
+
+</LinearLayout>
