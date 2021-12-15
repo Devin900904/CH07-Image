@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+
+    <tw.tcnr14.m0708.CircleImgView
+        android:id="@+id/m0708_im01"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/Olive"
+        android:contentDescription="@string/m708_t001"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/t01">
+
+    </tw.tcnr14.m0708.CircleImgView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/Olive"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/m0708_t002"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Olive"
+            android:text="@string/m0708_t001"
+            android:textColor="@color/Aqua"
+            android:textSize="@dimen/fontsize" />
+
+        <TextView
+            android:id="@+id/m0708_t003"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Yellow"
+            android:textSize="@dimen/fontsize" />
+    </LinearLayout>
+
+</LinearLayout>

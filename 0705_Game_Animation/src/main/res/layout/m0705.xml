@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/m0705_r001"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back01"
     android:padding="@dimen/Margins">
@@ -58,7 +59,7 @@
         android:layout_alignStart="@+id/m0705_t003"
         android:layout_marginStart="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
-        android:background="@color/Silver"
+        android:background="@drawable/circle_shape"
         android:contentDescription="@string/m0705_b001"
         android:src="@drawable/scissors"
         android:text="@string/m0705_b001"
@@ -73,7 +74,7 @@
         android:layout_alignStart="@+id/m0705_t003"
         android:layout_marginStart="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
-        android:background="#00000000"
+        android:background="@drawable/circle_shape"
         android:contentDescription="@string/m0705_b002"
         android:src="@drawable/stone"
         android:text="@string/m0705_b002"
@@ -87,26 +88,48 @@
         android:layout_alignStart="@+id/m0705_t003"
         android:layout_marginStart="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
-        android:background="#00000000"
+        android:background="@drawable/circle_shape"
         android:contentDescription="@string/m0705_b003"
         android:src="@drawable/net"
         android:text="@string/m0705_b003"
         android:textSize="@dimen/fontsize"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <ImageView
+    <!--    <ImageSwitcher-->
+    <!--        android:id="@+id/m0705_c001"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignStart="@+id/m0705_t002"-->
+    <!--        android:layout_alignTop="@+id/m0705_b002"-->
+    <!--        android:layout_marginStart="@dimen/Margins"-->
+    <!--        android:contentDescription="@string/m0705_b003"-->
+    <!--        android:gravity="center_vertical|center_horizontal"-->
+<!--            android:src="@drawable/scissors"-->
+    <!--        android:text="@string/m0705_b001"-->
+
+<!--    <ImageSwitcher-->
+<!--        android:id="@+id/m0705_c001"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignStart="@+id/m0705_t002"-->
+<!--        android:layout_alignTop="@+id/m0705_b002"-->
+<!--        android:layout_marginStart="@dimen/Margins"-->
+<!--        android:background="@drawable/circle_shape"-->
+<!--        android:contentDescription="@string/m0705_b003"-->
+<!--        android:foregroundGravity="center"-->
+<!--        android:src="@drawable/scissors">-->
+
+<!--    </ImageSwitcher>-->
+    <ImageSwitcher
         android:id="@+id/m0705_c001"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/m0705_t002"
         android:layout_alignTop="@+id/m0705_b002"
         android:layout_marginStart="@dimen/Margins"
-        android:background="@drawable/shape_ring"
-        android:contentDescription="@string/m0705_b003"
-        android:gravity="center_vertical|center_horizontal"
-        android:src="@drawable/scissors"
-        android:text="@string/m0705_b001"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginTop="0dp"
+        android:background="@drawable/ring"
+        app:srcCompat="@drawable/scissors" />
 
     <TextView
         android:id="@+id/m0705_s001"
@@ -118,8 +141,9 @@
         android:layout_marginTop="@dimen/Margins"
         android:layout_marginEnd="@dimen/Margins"
         android:layout_marginBottom="@dimen/Margins"
+        android:background="@color/Silver"
         android:text="@string/m0705_s001"
-        android:textColor="@color/Lime"
+        android:textColor="@color/Navy"
         android:textSize="@dimen/fontsize" />
 
     <TextView
@@ -132,8 +156,9 @@
         android:layout_marginLeft="@dimen/Margins"
         android:layout_marginTop="@dimen/Margins"
         android:layout_marginRight="@dimen/Margins"
+        android:background="@color/Silver"
         android:text="@string/m0705_f000"
-        android:textColor="@color/Lime"
+        android:textColor="@color/Navy"
         android:textSize="@dimen/fontsize" />
 
     <TextView

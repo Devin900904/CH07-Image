@@ -4,7 +4,9 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.BounceInterpolator;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -23,8 +25,7 @@ import tw.tcnr14.m0705.R;
 public class M0705 extends AppCompatActivity implements
         ViewSwitcher.ViewFactory, AdapterView.OnItemClickListener {
 
-    // ----宣告變數----
-    private ImageView txtComPlay;
+
     private TextView txtSelect, txtResult;
     private ImageButton btnScissors, btnStone, btnNet;
     private String user_select;
@@ -35,6 +36,8 @@ public class M0705 extends AppCompatActivity implements
     private MediaPlayer mediaDraw; // 宣告媒體物件 平
     private RelativeLayout r_layout;
 
+    private ImageSwitcher imgSwi_comp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,28 +46,30 @@ public class M0705 extends AppCompatActivity implements
     }
 
     private void setupViewComponent() {
-        // ---取得R.java 配置碼---
-        txtComPlay = (ImageView) findViewById(R.id.m0705_c001); // 電腦選擇
-        txtSelect = (TextView) findViewById(R.id.m0705_s001); // 選擇結果
-        txtResult = (TextView) findViewById(R.id.m0705_f000); // 輸贏判斷
-        btnScissors = (ImageButton) findViewById(R.id.m0705_b001); // 剪刀
-        btnStone = (ImageButton) findViewById(R.id.m0705_b002); // 石頭
-        btnNet = (ImageButton) findViewById(R.id.m0705_b003); // 布
 
-        //--設定imageButton初始值為全透明
 
-        // ---開機動畫---
+
+        imgSwi_comp = (ImageSwitcher) findViewById(R.id.m0705_c001);
+        imgSwi_comp.setFactory(this);
+        txtSelect = (TextView) findViewById(R.id.m0705_s001);                    // 選擇結果
+        txtResult = (TextView) findViewById(R.id.m0705_f000);                   // 輸贏判斷
+        btnScissors = (ImageButton) findViewById(R.id.m0705_b001);      // 剪刀
+        btnStone = (ImageButton) findViewById(R.id.m0705_b002);          // 石頭
+        btnNet = (ImageButton) findViewById(R.id.m0705_b003);             // 布
+
+
+
+        // 開機動畫
         r_layout = (RelativeLayout) findViewById(R.id.m0705_r001);
         r_layout.setBackgroundResource(R.drawable.back01);
-//        r_layout.setAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_out));
         r_layout.setAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_scale_rotate_in));
         r_layout.setBackgroundResource(R.drawable.back01);
         u_setalpha();
-        // --開啟時片頭音樂-----
+        // 開啟時音樂
         startmusic = MediaPlayer.create(getApplicationContext(), R.raw.guess);
         startmusic.start();
 
-        //--設定音樂連結--
+           //設定音樂連結
         mediaWin = MediaPlayer.create(getApplicationContext(), R.raw.win);
         mediaLose = MediaPlayer.create(getApplicationContext(), R.raw.lose);
         mediaDraw = MediaPlayer.create(getApplicationContext(), R.raw.haha);
@@ -78,15 +83,16 @@ public class M0705 extends AppCompatActivity implements
 
 
         private void u_setalpha() {
-        //imageButton 背景為銀色且為全透明
-        btnScissors.setBackgroundColor(Color.GRAY);
-        btnScissors.getBackground().setAlpha(0); //0-255
-        btnStone.setBackgroundColor(Color.GRAY);
+        //i背景為銀色且為全透明
+        btnScissors.setBackgroundResource(R.drawable.circle_shape);
+        btnScissors.getBackground().setAlpha(0);
+
+        btnStone.setBackgroundResource(R.drawable.circle_shape);
         btnStone.getBackground().setAlpha(0);
-        btnNet.setBackgroundColor(Color.GRAY);
+
+        btnNet.setBackgroundResource(R.drawable.circle_shape);
         btnNet.getBackground().setAlpha(0);
     }
-
 
     private Button.OnClickListener btn01On = new Button.OnClickListener() {
 
@@ -94,29 +100,29 @@ public class M0705 extends AppCompatActivity implements
         public void onClick(View v) {
             int iComPlay = (int) (Math.random() * 3 + 1);
 
-            // 1 - scissors, 2 - stone, 3 - net.
+            u_setalpha();
             switch (iComPlay) {
                 case 1:
                     user_select = getString(R.string.m0705_s002) + getString(R.string.m0705_b001) + " ";
-                    txtComPlay.setImageResource(R.drawable.scissors); // 轉換ImageView剪刀
+                    imgSwi_comp.setImageResource(R.drawable.scissors); // 轉換ImageView剪刀
                     break;
                 case 2:
                     user_select = getString(R.string.m0705_s002) + getString(R.string.m0705_b002) + " ";
-                    txtComPlay.setImageResource(R.drawable.stone); // 轉換ImageView石頭
+                    imgSwi_comp.setImageResource(R.drawable.stone); // 轉換ImageView石頭
                     break;
                 case 3:
                     user_select = getString(R.string.m0705_s002) + getString(R.string.m0705_b003) + " ";
-                    txtComPlay.setImageResource(R.drawable.net); // 轉換ImageView布
+                    imgSwi_comp.setImageResource(R.drawable.net); // 轉換ImageView布
                     break;
             }
             switch (v.getId()) {
                 case R.id.m0705_b001:
-                    // 選擇 剪刀scissors
+                    // 選擇 剪刀
                     user_select += getString(R.string.m0705_s001)  + getString(R.string.m0705_b001);
-                    //---------------------------------
+
                     u_setalpha();
                     btnScissors.getBackground().setAlpha(150);
-                    //---------------------------------
+
                     switch (iComPlay) {
                         case 1:
                             music(2);
@@ -171,6 +177,12 @@ public class M0705 extends AppCompatActivity implements
                     }
                     break;
             }
+            imgSwi_comp.clearAnimation();
+            Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_trans_bounce);
+            anim.setInterpolator(new BounceInterpolator());
+            imgSwi_comp.setAnimation(anim);
+
+            //------------電腦出拳------------------
             txtSelect.setText(user_select);
             txtResult.setText(answer);
         }
@@ -195,27 +207,27 @@ public class M0705 extends AppCompatActivity implements
 
             }
         switch (i) {
-            case 1: //贏
+            case 1:                               //贏
                 mediaWin.start();
                 answer = getString(R.string.m0705_f000) + getString(R.string.m0705_f003); // 平
                 txtResult.setTextColor(Color.GREEN); // 贏用綠顯示
                 Toast.makeText(getApplicationContext(), R.string.m0705_f001, Toast.LENGTH_SHORT).show();
                 break;
-            case 2: //平
+            case 2:                              //平手
                 mediaDraw.start();
                 answer = getString(R.string.m0705_f000) + getString(R.string.m0705_f003); // 平
                 txtResult.setTextColor(Color.YELLOW); // 平用黃顯示
                 Toast.makeText(getApplicationContext(), R.string.m0705_f003,
                         Toast.LENGTH_LONG).show(); // 平
                 break;
-            case 3: //輸
+            case 3:                              //輸
                 mediaLose.start();
                 answer = getString(R.string.m0705_f000) + getString(R.string.m0705_f002); // 輸
                 txtResult.setTextColor(Color.RED); // 輸用紅顯示
                 Toast.makeText(getApplicationContext(), R.string.m0705_f002,
                         Toast.LENGTH_LONG).show(); // 輸
                 break;
-            //----
+
         }
 
     };
@@ -226,7 +238,7 @@ public class M0705 extends AppCompatActivity implements
     }
     public View makeView() {
         ImageView v = new ImageView(this);
-        v.setBackgroundColor(0xFF000000);
+//        v.setBackgroundColor(0x00000000);
         v.setLayoutParams(new ImageSwitcher.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         return v;

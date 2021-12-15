@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="m0707_t001">物件:</string>
+
+    <string name="m0707_imageview">圓形imageview</string>
+    <string name="m0707_ingbutton">圓形imagebutton</string>
+</resources>
