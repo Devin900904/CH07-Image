@@ -11,13 +11,36 @@
         <entry key="..\:/android-work/CH07-Image/0702_Animation/src/main/res/menu/m0702.xml" value="0.31302083333333336" />
         <entry key="..\:/android-work/CH07-Image/0703_HorizontalScrollView/src/main/res/layout/m0703.xml" value="0.234765625" />
         <entry key="..\:/android-work/CH07-Image/0703_HorizontalScrollView/src/main/res/menu/m0702.xml" value="0.234765625" />
-        <entry key="..\:/android-work/CH07-Image/0703_HorizontalScrollView/src/main/res/menu/m0703.xml" value="0.1" />
+        <entry key="..\:/android-work/CH07-Image/0703_HorizontalScrollView/src/main/res/menu/m0703.xml" value="0.25" />
         <entry key="..\:/android-work/CH07-Image/0703_HorizontalScrollView/src/main/res/menu/menu.xml" value="0.234765625" />
-        <entry key="..\:/android-work/CH07-Image/0704_ListView_with_icons/src/main/res/layout/list_item.xml" value="0.5" />
+        <entry key="..\:/android-work/CH07-Image/0704_ListView_with_icons/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/android-work/CH07-Image/0704_ListView_with_icons/src/main/res/layout/m0704.xml" value="0.234765625" />
         <entry key="..\:/android-work/CH07-Image/0704_ListView_with_icons/src/main/res/menu/m0703.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable-v24/circle_shape.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable-v24/ring.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable-v24/shape_ring.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable/ic_launcher_7_5_background.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable/ic_launcher_7_5_foreground.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable/ic_launcher_background.xml" value="0.14375" />
+        <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/drawable/shape_ring.xml" value="0.14375" />
         <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/layout/m0606.xml" value="0.234765625" />
         <entry key="..\:/android-work/CH07-Image/0705_Game_Animation/src/main/res/layout/m0705.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0706_TextView_setup/src/main/res/layout/m0706.xml" value="0.22109375" />
+        <entry key="..\:/android-work/CH07-Image/0707_Imagecircle/src/main/res/layout/m0707.xml" value="0.22109375" />
+        <entry key="..\:/android-work/CH07-Image/0708_ListView_circleImage/src/main/res/layout/list_item.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0708_ListView_circleImage/src/main/res/layout/m0708.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_layer_list.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_oval.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_rectangle.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_ring.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_selector.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/activity_shape.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/item_list.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0709_Android_SHAPE/src/main/res/layout/m0709.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0710_andrdrawable/src/main/res/layout/m0710.xml" value="0.234765625" />
+        <entry key="..\:/android-work/CH07-Image/0710_andrdrawable/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1375" />
+        <entry key="..\:/android-work/CH07-Image/0710_andrdrawable/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1375" />
         <entry key="..\:/android-work/CH07-Image/myapplication/src/main/res/layout/activity_main.xml" value="0.31302083333333336" />
         <entry key="..\:/android-work/CH07-Image/myapplication/src/main/res/menu/menu.xml" value="0.25" />
       </map>
